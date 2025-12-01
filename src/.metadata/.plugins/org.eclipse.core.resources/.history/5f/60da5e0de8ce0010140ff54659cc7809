@@ -46,8 +46,8 @@ public class LinkedList {
 			this.listSize++;
 		} else {
 			// adiciona um próximo elemento ao último e ele mesmo será o úitmo
+			this.last = newElement;
 			this.last.setNext(newElement);
-			this.last = newElement;			
 			this.listSize++;
 		}
 	}
@@ -60,7 +60,7 @@ public class LinkedList {
 				current = current.getNext();
 			}
 		}
-
+		
 		return current;
 	}
 

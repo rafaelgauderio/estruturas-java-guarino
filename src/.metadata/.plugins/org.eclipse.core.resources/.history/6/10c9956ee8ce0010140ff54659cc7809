@@ -22,13 +22,12 @@ public class ProgramListaLigada {
 		linkedList.addElement("Phone");
 		linkedList.addElement("Mouse");
 		linkedList.addElement("Keyboard");
-		linkedList.addElement("Pendrive");
 
 		System.out.println("Size: " + linkedList.getListSize());
 		System.out.println("First:" + linkedList.getFirst().getValue());
 		System.out.println("Last:" + linkedList.getLast().getValue());
 
-		System.out.println("\nImprimindo toda a lista");
+		// imprimindo toda a lista
 		for (int i = 0; i < linkedList.getListSize(); i++) {
 			System.out.println(linkedList.get(i).getValue());
 		}
