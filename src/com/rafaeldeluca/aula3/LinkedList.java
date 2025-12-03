@@ -47,9 +47,29 @@ public class LinkedList {
 		} else {
 			// adiciona um próximo elemento ao último e ele mesmo será o úitmo
 			this.last.setNext(newElement);
-			this.last = newElement;			
+			this.last = newElement;
 			this.listSize++;
 		}
+	}
+
+	public void removeElement(String value) {
+		Element previous = null;
+		Element current = this.first;
+		for (int i = 0; i < this.getListSize(); i++) {
+			if (current.getValue().equalsIgnoreCase(value)) {
+				// caso de um valor do meio da lista Ligada
+				// ponteiro do anterior vai para o proximo do atual
+				previous.setNext(current.getNext());
+				// atual fica sem valor
+				current = null;
+				listSize = this.listSize - 1;
+				break;
+			}
+			// se exclui o atual; o anterior vira o atual e o atual vira o proximo;
+			previous = current;
+			current = current.getNext();
+		}
+		
 	}
 
 	public Element get(int position) {

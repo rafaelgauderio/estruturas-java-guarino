@@ -1,5 +1,4 @@
 INDEX VERSION 1.131+C:\Users\rafael\Desktop\java orientado a objetos\estruturas-java-guarino\src\.metadata\.plugins\org.eclipse.jdt.core
-996700402.index
 1865797976.index
-327928286.index
+996700402.index
 75931715.index

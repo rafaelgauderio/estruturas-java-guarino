@@ -32,6 +32,14 @@ public class ProgramListaLigada {
 		for (int i = 0; i < linkedList.getListSize(); i++) {
 			System.out.println(linkedList.get(i).getValue());
 		}
+		
+		linkedList.removeElement("Keyboard");
+		linkedList.removeElement("Phone");
+		
+		System.out.println("\nImprimindo a lista após as remoções");
+		for (int j = 0; j < linkedList.getListSize(); j++) {
+			System.out.println(linkedList.get(j).getValue());
+		}
 
 	}
 
