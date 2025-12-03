@@ -46,9 +46,7 @@ public class ProgramListaLigada {
 			System.out.println(linkedList.get(j).getValue());
 		}
 
-		System.out.println("\nImprimindo toda a lista");
 		linkedList.addElement("Lithium Battery");
-		linkedList.addElement("Nobreak");		
 		for (int j = 0; j < linkedList.getListSize(); j++) {
 			System.out.println(linkedList.get(j).getValue());
 		}

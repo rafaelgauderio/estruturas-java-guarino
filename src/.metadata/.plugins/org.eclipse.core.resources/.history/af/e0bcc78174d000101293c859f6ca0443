@@ -57,29 +57,11 @@ public class LinkedList {
 		Element current = this.first;
 		for (int i = 0; i < this.getListSize(); i++) {
 			if (current.getValue().equalsIgnoreCase(value)) {
-				// caso a lista só tiver 1 elemento
-				// if(current==this.first && current==this.last) {
-				if (this.listSize == 1) {
-					this.first = null;
-					this.last = null;
-					// caso for o primeiro
-					// o primeiro vai virar o proximo do atual e o atual vai excluir
-				} else if (current == this.first) {
-					this.first = current.getNext();
-					current.setNext(null);
-				} // caso for o ultimo
-					// o ultimo vai virar o anterior e o atual vai excluir
-				else if (current == this.last) {
-					this.last = previous;
-					previous.setNext(null);
-				} else {
-					// caso de um valor do meio da lista Ligada
-					// ponteiro do anterior vai para o proximo do atual
-					previous.setNext(current.getNext());
-					// atual fica sem valor
-					current = null;
-				}
-
+				// caso de um valor do meio da lista Ligada
+				// ponteiro do anterior vai para o proximo do atual
+				previous.setNext(current.getNext());
+				// atual fica sem valor
+				current = null;
 				listSize = this.listSize - 1;
 				break;
 			}
@@ -87,7 +69,7 @@ public class LinkedList {
 			previous = current;
 			current = current.getNext();
 		}
-
+		
 	}
 
 	public Element get(int position) {

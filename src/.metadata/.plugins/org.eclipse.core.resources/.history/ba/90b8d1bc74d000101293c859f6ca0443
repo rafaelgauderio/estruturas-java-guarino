@@ -41,17 +41,10 @@ public class ProgramListaLigada {
 		linkedList.removeElement("Mouse");
 
 		System.out.println("\nImprimindo a lista após as remoções");
-		System.out.println("Size: " + linkedList.getListSize());
 		for (int j = 0; j < linkedList.getListSize(); j++) {
 			System.out.println(linkedList.get(j).getValue());
 		}
 
-		System.out.println("\nImprimindo toda a lista");
-		linkedList.addElement("Lithium Battery");
-		linkedList.addElement("Nobreak");		
-		for (int j = 0; j < linkedList.getListSize(); j++) {
-			System.out.println(linkedList.get(j).getValue());
-		}
 	}
 
 }

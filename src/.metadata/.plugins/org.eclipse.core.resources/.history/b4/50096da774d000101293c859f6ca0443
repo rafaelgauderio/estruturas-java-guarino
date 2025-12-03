@@ -32,26 +32,15 @@ public class ProgramListaLigada {
 		for (int i = 0; i < linkedList.getListSize(); i++) {
 			System.out.println(linkedList.get(i).getValue());
 		}
-
+		
 		linkedList.removeElement("Keyboard");
 		linkedList.removeElement("Phone");
-		linkedList.removeElement("Tablet");
-		linkedList.removeElement("Notebook");
-		linkedList.removeElement("Pendrive");
-		linkedList.removeElement("Mouse");
-
+		
 		System.out.println("\nImprimindo a lista após as remoções");
-		System.out.println("Size: " + linkedList.getListSize());
 		for (int j = 0; j < linkedList.getListSize(); j++) {
 			System.out.println(linkedList.get(j).getValue());
 		}
 
-		System.out.println("\nImprimindo toda a lista");
-		linkedList.addElement("Lithium Battery");
-		linkedList.addElement("Nobreak");		
-		for (int j = 0; j < linkedList.getListSize(); j++) {
-			System.out.println(linkedList.get(j).getValue());
-		}
 	}
 
 }
