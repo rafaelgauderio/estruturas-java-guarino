@@ -1,4 +1,8 @@
-.metadata
-src/com/bin
+# Eclipse-specific files
 src/.metadata/
-src/.teste/
+src/com/bin/
+target/
+src/com/bin/.classpath
+src/com/rafaeldeluca/.classpath
+.project
+.settings/
