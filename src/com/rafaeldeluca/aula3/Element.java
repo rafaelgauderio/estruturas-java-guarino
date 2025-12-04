@@ -1,27 +1,27 @@
 package aula3;
 
-public class Element {	
+public class Element<TYPE> {	
 	
-	private String value;
-	private Element next; // ponteiro para o proximo Elemento
+	private TYPE value;
+	private Element<TYPE> next; // ponteiro para o proximo Elemento
 	
-	public Element(String value) {
+	public Element(TYPE value) {
 		this.value = value;
 	}
 
-	public String getValue() {
+	public TYPE getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(TYPE value) {
 		this.value = value;
 	}
 
-	public Element getNext() {
+	public Element<TYPE> getNext() {
 		return next;
 	}
 
-	public void setNext(Element next) {
+	public void setNext(Element<TYPE> next) {
 		this.next = next;
 	}
 	

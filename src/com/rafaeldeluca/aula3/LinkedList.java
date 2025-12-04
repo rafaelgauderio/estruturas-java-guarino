@@ -1,28 +1,28 @@
 package aula3;
 
-public class LinkedList {
+public class LinkedList<TYPE> {
 
-	private Element first;
-	private Element last;
+	private Element<TYPE> first;
+	private Element<TYPE> last;
 	private int listSize;
 
 	public LinkedList() {
 		this.listSize = 0;
 	}
 
-	public Element getFirst() {
+	public Element<TYPE> getFirst() {
 		return first;
 	}
 
-	public void setFirst(Element first) {
+	public void setFirst(Element<TYPE> first) {
 		this.first = first;
 	}
 
-	public Element getLast() {
+	public Element<TYPE> getLast() {
 		return last;
 	}
 
-	public void setLast(Element last) {
+	public void setLast(Element<TYPE> last) {
 		this.last = last;
 	}
 
@@ -36,8 +36,8 @@ public class LinkedList {
 	 * public void setListSize(int listSize) { this.listSize = listSize; }
 	 */
 
-	public void addElement(String value) {
-		Element newElement = new Element(value);
+	public void addElement(TYPE value) {
+		Element<TYPE> newElement = new Element<TYPE>(value);
 		// verificando se a lista está vazia
 		// nesse caso o primeiro será também o último elemento
 		if (this.first == null && this.last == null) {
@@ -52,11 +52,11 @@ public class LinkedList {
 		}
 	}
 
-	public void removeElement(String value) {
-		Element previous = null;
-		Element current = this.first;
+	public void removeElement(TYPE value) {
+		Element<TYPE> previous = null;
+		Element<TYPE> current = this.first;
 		for (int i = 0; i < this.getListSize(); i++) {
-			if (current.getValue().equalsIgnoreCase(value)) {
+			if (current.getValue().equals(value)) {
 				// caso a lista só tiver 1 elemento
 				// if(current==this.first && current==this.last) {
 				if (this.listSize == 1) {
@@ -90,8 +90,8 @@ public class LinkedList {
 
 	}
 
-	public Element get(int position) {
-		Element current = this.first;
+	public Element<TYPE> get(int position) {
+		Element<TYPE> current = this.first;
 		// senão tiver um próximo elemento, significa que ainda não chegou no último
 		for (int i = 0; i < position; i++) {
 			if (current.getNext() != null) {

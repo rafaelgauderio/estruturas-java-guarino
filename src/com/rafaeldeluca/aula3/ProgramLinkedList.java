@@ -1,6 +1,6 @@
 package aula3;
 
-public class ProgramListaLigada {
+public class ProgramLinkedList {
 
 	public static void main(String[] args) {
 
@@ -12,7 +12,7 @@ public class ProgramListaLigada {
 				+ "\n\tNão tem como fazer acesso direto pelo index do elemento."
 				+ "\n\tLinkedList é a lista ligada nativa do java\n");
 
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<String>();
 		linkedList.addElement("Tablet");
 
 		System.out.println("Size:" + linkedList.getListSize());
@@ -52,6 +52,16 @@ public class ProgramListaLigada {
 		for (int j = 0; j < linkedList.getListSize(); j++) {
 			System.out.println(linkedList.get(j).getValue());
 		}
+		
+		System.out.println("\nLinkedList of Students");
+		LinkedList<Student> students = new LinkedList<Student>();
+		students.addElement(new Student(1712,"Rafael de Luca"));
+		students.addElement(new Student(1512,"Claudia de Luca"));
+		students.addElement(new Student(2745,"Larissa Van der Lee"));
+		for(int i=0; i < students.getListSize() ; i++) {
+			System.out.println(students.get(i).getValue());
+		}
+		
 	}
 
 }
