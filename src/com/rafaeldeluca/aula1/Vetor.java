@@ -1,4 +1,7 @@
 package aula1;
+
+import java.util.Arrays;
+
 public class Vetor {
 
 	public static void main(String [] args) {
@@ -28,9 +31,10 @@ public class Vetor {
 			i++;
 		}
 		
-		
-		
-		
+		System.out.println("\nFor each as stream");
+		Arrays.stream(vector).forEach(System.out::println);
+		System.out.println("\nFor each as lambda expression");
+		Arrays.stream(vector).forEach((value) -> System.out.printf("%d\t",value));
 		
 	}
 	
