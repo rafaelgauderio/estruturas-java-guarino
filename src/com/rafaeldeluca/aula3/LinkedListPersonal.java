@@ -1,12 +1,12 @@
 package aula3;
 
-public class LinkedList<TYPE> {
+public class LinkedListPersonal<TYPE> {
 
 	private Element<TYPE> first;
 	private Element<TYPE> last;
 	private int listSize;
 
-	public LinkedList() {
+	public LinkedListPersonal() {
 		this.listSize = 0;
 	}
 

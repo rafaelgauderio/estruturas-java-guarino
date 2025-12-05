@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import aula3.LinkedListPersonal;
+
 public class ProgramComparator {
 	
 	public static void main (String [] args) {
@@ -13,7 +15,11 @@ public class ProgramComparator {
 				+ "\nLista ligada mais rápida para inserir porque não tem index, não tem que reordenar a lista"
 				+ "\n\ttoda vez que insere um novo elemento.");
 		
-		List<Integer> list = new LinkedList<Integer>(); 
+		List<Integer> list = new LinkedList<Integer>();
+		LinkedListPersonal<Integer> linkedListPersonal = new LinkedListPersonal<Integer>();
+		ArrayList<Integer> array = new ArrayList<Integer>(); 
+		
+		// LinkedList
 		int limit = 99999;
 		long initialTime = System.currentTimeMillis();
 		long finalTime = 0;
@@ -24,15 +30,25 @@ public class ProgramComparator {
 		System.out.println("\nTempo para adicionar " + limit + " elementos na LinkedList"
 				+ ": " + (finalTime - initialTime));
 		
-		
-		ArrayList<Integer> array = new ArrayList<Integer>(); 
+		// vetor
 		initialTime = System.currentTimeMillis();		
 		for(int i=0; i < limit; i++) {
 			array.add(i);
 		}
 		finalTime = System.currentTimeMillis();
-		System.out.println("\nTempo para adicionar " + limit + " elementos no vetor"
+		System.out.println("Tempo para adicionar " + limit + " elementos no vetor"
 				+ ": " + (finalTime - initialTime));
+		
+		// lista ligada personalizada
+		initialTime = System.currentTimeMillis();
+		for(int i=0; i < limit ; i++) {
+			linkedListPersonal.addElement(i);
+		}
+		finalTime = System.currentTimeMillis();		
+		System.out.println("Tempo para adicionar " + limit + " elementos na LinkedList Personalizada"
+				+ ": " + (finalTime - initialTime));
+		
+		// tempo para ler os valores
 		
 		System.out.println("\nLendo os valores");
 		initialTime = System.currentTimeMillis();	
@@ -52,6 +68,14 @@ public class ProgramComparator {
 		System.out.println("Tempo para ler " + limit + " elementos no vetor"
 				+ ": " + (finalTime - initialTime));
 		
+		// lendo valores na lista ligada personalizada
+		initialTime = System.currentTimeMillis();	
+		for(int j=0; j < linkedListPersonal.getListSize(); j++) {
+			linkedListPersonal.get(j);
+		}
+		finalTime= System.currentTimeMillis();
+		System.out.println("Tempo para ler " + limit + " elementos na LinkedList Personalizada"
+				+ ": " + (finalTime - initialTime));		
 	}
 
 }

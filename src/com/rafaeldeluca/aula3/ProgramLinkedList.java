@@ -12,7 +12,7 @@ public class ProgramLinkedList {
 				+ "\n\tNão tem como fazer acesso direto pelo index do elemento."
 				+ "\n\tLinkedList é a lista ligada nativa do java\n");
 
-		LinkedList<String> linkedList = new LinkedList<String>();
+		LinkedListPersonal<String> linkedList = new LinkedListPersonal<String>();
 		linkedList.addElement("Tablet");
 
 		System.out.println("Size:" + linkedList.getListSize());
@@ -54,7 +54,7 @@ public class ProgramLinkedList {
 		}
 		
 		System.out.println("\nLinkedList of Students");
-		LinkedList<Student> students = new LinkedList<Student>();
+		LinkedListPersonal<Student> students = new LinkedListPersonal<Student>();
 		students.addElement(new Student(1712,"Rafael de Luca"));
 		students.addElement(new Student(1512,"Claudia de Luca"));
 		students.addElement(new Student(2745,"Larissa Van der Lee"));
