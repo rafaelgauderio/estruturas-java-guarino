@@ -102,4 +102,11 @@ public class LinkedListPersonal<TYPE> {
 		return current;
 	}
 
+	// usando iterator não precisa percorrer toda a lista ligada a cada iteração
+	// percorre apenas um vez, verifica se o próximo elemento não é nulo e avança na lista
+	public LinkedListIterator<TYPE> get() {
+		return new LinkedListIterator<TYPE>(this.first);
+
+	}
+
 }

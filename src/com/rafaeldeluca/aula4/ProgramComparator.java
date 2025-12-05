@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import aula3.LinkedListIterator;
 import aula3.LinkedListPersonal;
 
 public class ProgramComparator {
@@ -12,8 +13,8 @@ public class ProgramComparator {
 		
 		System.out.println("\nComparação de desempenho entre vetor e Lista ligada"
 				+ "\nVetor mais rápido para ler porque elementos tem index."
-				+ "\nLista ligada mais rápida para inserir porque não tem index, não tem que reordenar a lista"
-				+ "\n\ttoda vez que insere um novo elemento.");
+				+ "\nLista ligada mais rápida para inserir porque não tem index, "
+				+ "\n\tnão tem que reordenar a lista toda vez que insere um novo elemento.");
 		
 		List<Integer> list = new LinkedList<Integer>();
 		LinkedListPersonal<Integer> linkedListPersonal = new LinkedListPersonal<Integer>();
@@ -27,7 +28,7 @@ public class ProgramComparator {
 			list.add(i);
 		}
 		finalTime = System.currentTimeMillis();
-		System.out.println("\nTempo para adicionar " + limit + " elementos na LinkedList"
+		System.out.println("\nTempo para adicionar " + limit + " elementos na LinkedList da API do java"
 				+ ": " + (finalTime - initialTime));
 		
 		// vetor
@@ -56,7 +57,7 @@ public class ProgramComparator {
 			list.get(j);
 		}
 		finalTime= System.currentTimeMillis();
-		System.out.println("Tempo para ler " + limit + " elementos na lista"
+		System.out.println("Tempo para ler " + limit + " elementos na LinkedList da API do java"
 				+ ": " + (finalTime - initialTime));
 		
 		// lendo valores no vetor
@@ -75,7 +76,20 @@ public class ProgramComparator {
 		}
 		finalTime= System.currentTimeMillis();
 		System.out.println("Tempo para ler " + limit + " elementos na LinkedList Personalizada"
-				+ ": " + (finalTime - initialTime));		
+				+ ": " + (finalTime - initialTime));
+		
+		// usando iterator
+		initialTime = System.currentTimeMillis();
+		LinkedListIterator <Integer> iterator = linkedListPersonal.get();
+		while(iterator.hasNext()==true) {
+			iterator.getNext();
+		}
+		finalTime = System.currentTimeMillis();
+		System.out.println("Tempo para ler " + limit + " elementos na LinkedList Personalizada usando iterator"
+				+ ": " + (finalTime - initialTime));			
+		
+		System.out.println("Usando o iterator não precisa percorrer a lista inteira a cada iteração."
+				+ "Isso melhora muito a performance.");
 	}
 
 }
