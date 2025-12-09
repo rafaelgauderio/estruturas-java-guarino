@@ -11,8 +11,6 @@ public class BubbleSort {
 
 		// printVector(vector);
 
-		int[] vector = new int[10];
-
 		bubbleSort(10);
 		bubbleSort(100);
 		bubbleSort(1000);
