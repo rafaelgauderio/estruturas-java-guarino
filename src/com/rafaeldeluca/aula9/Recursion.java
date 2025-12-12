@@ -24,6 +24,11 @@ public class Recursion {
 		result.append(bd);
 		System.out.println(result);
 
+		System.out.println("Mathematical Product of 3: " + mathematicalProduct(3));
+		System.out.println("Mathematical Product of 4: " + mathematicalProduct(4));
+		System.out.println("Mathematical Product of 5: " + mathematicalProduct(5));
+		System.out.println("Mathematical Product of 20: " + mathematicalProduct(20));
+
 	}
 
 	public static double sum(double partialSum, int index, double[] vector) {
@@ -33,6 +38,15 @@ public class Recursion {
 		} else {
 			return partialSum; // condição de parada;
 		}
+	}
+
+	public static long mathematicalProduct(int upperLimit) {
+		if (upperLimit <= 1) {
+			return 1;
+		} else {
+			return upperLimit * mathematicalProduct(upperLimit - 1);
+		}
+
 	}
 
 }
