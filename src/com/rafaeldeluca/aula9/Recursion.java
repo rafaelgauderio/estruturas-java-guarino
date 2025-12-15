@@ -24,10 +24,16 @@ public class Recursion {
 		result.append(bd);
 		System.out.println(result);
 
-		System.out.println("Mathematical Product of 3: " + mathematicalProduct(3));
-		System.out.println("Mathematical Product of 4: " + mathematicalProduct(4));
-		System.out.println("Mathematical Product of 5: " + mathematicalProduct(5));
-		System.out.println("Mathematical Product of 20: " + mathematicalProduct(20));
+		try {
+			System.out.println("Mathematical Product of 3: " + mathematicalProduct(3));
+			System.out.println("Mathematical Product of 4: " + mathematicalProduct(4));
+			System.out.println("Mathematical Product of 5: " + mathematicalProduct(5));
+			System.out.println("Mathematical Product of 20: " + mathematicalProduct(20));
+			System.out.println("Mathematical Product of 20: " + mathematicalProduct(-10));
+			System.out.println("Mathematical Product of 20: " + mathematicalProduct(6));
+		} catch (IllegalArgumentException exception) {
+			System.out.println("Error of illegal argument: " + exception.getMessage());
+		}
 
 	}
 
@@ -41,6 +47,9 @@ public class Recursion {
 	}
 
 	public static long mathematicalProduct(int upperLimit) {
+		if (upperLimit < 0) {
+			throw new IllegalArgumentException("Number can not be lessa than zero");
+		}
 		if (upperLimit <= 1) {
 			return 1;
 		} else {
