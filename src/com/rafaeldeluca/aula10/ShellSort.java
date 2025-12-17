@@ -14,7 +14,6 @@ public class ShellSort {
 		shellSort(10000);
 		shellSort(100000);
 		shellSort(1000000);
-
 	}
 
 	public static int[] shellSort(int size) {
