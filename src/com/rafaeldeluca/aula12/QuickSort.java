@@ -8,7 +8,7 @@ public class QuickSort {
 				+ "Elementos menores à esquerda e maiores à direita, e ordenando recursivimente cada sub-parte.\n"
 				+ "In place, não estável, o desempenho depende de uma boa escolha do pivot.\n"
 				+ "Complecidade O(n.logn) no caso médio e O(n²) no pior caso.");
-
+		
 		printOrderArray(quickSort(createVector(25), 0, 24));
 	}
 
@@ -30,8 +30,7 @@ public class QuickSort {
 	}
 
 	private static int partition(int[] array, int left, int right) {
-		// começa o pivot no meio do array
-		int size = array.length;
+		// começa o pivot no meio do array		
 		int pivot = array[(int) (left + right) / 2];
 		int i = left - 1;
 		int j = right + 1;
