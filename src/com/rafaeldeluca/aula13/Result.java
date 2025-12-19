@@ -2,15 +2,20 @@ package aula13;
 
 public class Result {
 
-	private int swaps;
+	private long swaps;
 	private int[] array;
 
 	public Result(int swaps, int[] array) {
 		this.swaps = swaps;
 		this.array = array;
 	}
+	
+	public Result(long swaps, int[] array) {
+		this.swaps = swaps;
+		this.array = array;
+	}
 
-	public int getSwaps() {
+	public long getSwaps() {
 		return swaps;
 	}
 

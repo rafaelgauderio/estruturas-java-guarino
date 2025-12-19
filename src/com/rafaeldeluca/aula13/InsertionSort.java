@@ -4,7 +4,8 @@ public class InsertionSort {
 
 	public static Result sort(int[] array) {
 		// complexit O(n²)
-		int swaps = 0, j, aux;
+		long swaps=0;
+		int j, aux;
 		for (int i = 1; i < array.length; i++) {
 			aux = array[i];
 			j = i - 1;

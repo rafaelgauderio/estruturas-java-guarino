@@ -7,67 +7,59 @@ public class ProgramComparison {
 		long start, end;
 		Result result;
 
-		int[] unsortedArray = createArray(15);
+		int[] unsortedArray = createArray(100000);
 		System.out.println("\nBuble Sort");
-		printArray(unsortedArray);
+		//printArray(unsortedArray);
 		start = System.currentTimeMillis();
 		result = BubbleSort.sort(unsortedArray.clone());
 		end = System.currentTimeMillis();		
-		printArray(result.getArray());
+		//printArray(result.getArray());
 		System.out.println("Total swapps: " + result.getSwaps());
 		System.out.println("Time (miliseconds): " + (end - start));
 		
 		System.out.println("\nInsertion Sort");
-		printArray(unsortedArray);
+		//printArray(unsortedArray);
 		start = System.currentTimeMillis();
 		result = InsertionSort.sort(unsortedArray.clone());
 		end = System.currentTimeMillis();		
-		printArray(result.getArray());
+		//printArray(result.getArray());
 		System.out.println("Total swapps: " + result.getSwaps());
 		System.out.println("Time (miliseconds): " + (end - start));
 		
 		System.out.println("\nSelection Sort");
-		printArray(unsortedArray);
+		//printArray(unsortedArray);
 		start = System.currentTimeMillis();
 		result = SelectionSort.sort(unsortedArray.clone());
 		end = System.currentTimeMillis();		
-		printArray(result.getArray());
+		//printArray(result.getArray());
 		System.out.println("Total swapps: " + result.getSwaps());
 		System.out.println("Time (miliseconds): " + (end - start));
 		
-		System.out.println("\nSelection Sort");
-		printArray(unsortedArray);
-		start = System.currentTimeMillis();
-		result = SelectionSort.sort(unsortedArray.clone());
-		end = System.currentTimeMillis();		
-		printArray(result.getArray());
-		System.out.println("Total swapps: " + result.getSwaps());
-		System.out.println("Time (miliseconds): " + (end - start));
-		
+
 		System.out.println("\nShell Sort");
-		printArray(unsortedArray);
+		//printArray(unsortedArray);
 		start = System.currentTimeMillis();
 		result = ShellSort.sort(unsortedArray.clone());
 		end = System.currentTimeMillis();		
-		printArray(result.getArray());
+		//printArray(result.getArray());
 		System.out.println("Total swapps: " + result.getSwaps());
 		System.out.println("Time (miliseconds): " + (end - start));
 		
 		System.out.println("\nHeap Sort");
-		printArray(unsortedArray);
+		//printArray(unsortedArray);
 		start = System.currentTimeMillis();
 		result = HeapSort.sort(unsortedArray.clone());
 		end = System.currentTimeMillis();		
-		printArray(result.getArray());
+		//printArray(result.getArray());
 		System.out.println("Total swapps: " + result.getSwaps());
 		System.out.println("Time (miliseconds): " + (end - start));
 		
 		System.out.println("\nQuick Sort");
-		printArray(unsortedArray);
+		//printArray(unsortedArray);
 		start = System.currentTimeMillis();
 		result = QuickSort.sort(unsortedArray.clone(), 0, unsortedArray.length);
 		end = System.currentTimeMillis();		
-		printArray(result.getArray());
+		//printArray(result.getArray());
 		System.out.println("Total swapps: " + result.getSwaps());
 		System.out.println("Time (miliseconds): " + (end - start));
 
