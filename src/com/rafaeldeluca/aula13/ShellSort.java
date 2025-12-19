@@ -9,13 +9,13 @@ public class ShellSort {
 		while (gap < size) {
 			gap = gap * 3 + 1;
 		}
-		gap = (int) Math.floor(gap) / 3;
+		gap = (int) Math.floor(gap/3);
 		int value, j;
 		while (gap > 0) {
 			for (int i = gap; i < size; i++) {
 				value = array[i];
 				j = i;
-				while (j <= gap && array[j - gap] > value) {
+				while (j >= gap && array[j - gap] > value) {
 					array[j] = array[j - gap];
 					j = j - gap;
 					swaps++;

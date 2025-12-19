@@ -2,7 +2,7 @@ package aula13;
 
 public class BubbleSort {
 
-	// complexiti O(n²)
+	// complexity O(n²)
 	public static Result sort(int[] array) {
 		int swaps = 0, aux;
 		for (int i = 0; i < array.length; i++) { // O(n)

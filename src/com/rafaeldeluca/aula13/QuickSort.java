@@ -12,10 +12,13 @@ public class QuickSort {
 		int i = low - 1;
 		int j = high;
 		while (true) {
-			for (; array[i] < pivot; i++)
-				;
-			for (; array[j] > pivot; j--)
-				;
+			do {
+				i++;
+			} while (array[i] < pivot);
+			do {
+				j--;
+			} while (array[j] > pivot);
+
 			if (i >= j) {
 				return j;
 			}
