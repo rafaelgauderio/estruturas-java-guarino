@@ -6,8 +6,8 @@ public class HeapSort {
 
 		System.out.println("É um algoritmo de seleção, tipo o Selection Sort\n"
 				+ "É um tipo de árvore binária especial em que o elemento pai é maior que elemento a esquerda e a direira.\n"
-				+ "Tem duas fases: na primeira, transforma o arrau em um heap máximo (elemento pai sempre maior que os filhos);\n"
-				+ "\tna segunda, extrao o maior elemento repetidamente, trocando-o com último.\n"
+				+ "Tem duas fases: na primeira, transforma o array em um heap máximo (elemento pai sempre maior que os filhos);\n"
+				+ "\tna segunda, extrai o maior elemento repetidamente, trocando-o com último.\n"
 				+ "Ordena 'in place', não estável\n"
 				+ "Tem complexidade O(n.log n)\n");
 
