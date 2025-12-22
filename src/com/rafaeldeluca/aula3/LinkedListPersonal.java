@@ -103,9 +103,23 @@ public class LinkedListPersonal<TYPE> {
 	}
 
 	// usando iterator não precisa percorrer toda a lista ligada a cada iteração
-	// percorre apenas um vez, verifica se o próximo elemento não é nulo e avança na lista
+	// percorre apenas um vez, verifica se o próximo elemento não é nulo e avança na
+	// lista
 	public LinkedListIterator<TYPE> get() {
 		return new LinkedListIterator<TYPE>(this.first);
+
+	}
+
+	public void addOnTop(TYPE newValue) {
+		Element<TYPE> newElement = new Element<>(newValue);
+		if (this.getFirst() == null && this.getLast() == null) {
+			this.setFirst(newElement);
+			this.setLast(newElement);
+		} else {
+			newElement.setNext(this.first);
+			this.first = newElement;
+		}
+		this.listSize++;
 
 	}
 
