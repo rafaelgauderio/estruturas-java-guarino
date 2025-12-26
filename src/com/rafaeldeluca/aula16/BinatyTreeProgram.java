@@ -23,8 +23,16 @@ public class BinatyTreeProgram {
 				+ "\n\tPercorrer na pré-ordem é na seguinte sequência: cima, esquerda, direita."
 				+ "\n\tPercorrer na pós-ordem é na sequinte sequência: esquerda, direita, cima.");
 
-		System.out.println("\nPrint Binary Tree in order");
+		System.out.println("Root: " + tree.getRoot().getValue());
+
+		System.out.println("\nPrint Binary Tree in-order");
 		tree.printInOrder(tree.getRoot());
+
+		System.out.println("\nPrint Binary Tree pre-order");
+		tree.printPreOrder(tree.getRoot());
+
+		System.out.println("\nPrint Binary Tree post-order");
+		tree.printPostOrder(tree.getRoot());
 
 	}
 

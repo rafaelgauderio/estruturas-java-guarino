@@ -51,4 +51,24 @@ public class BinaryTree<T extends Comparable<T>> {
 		}
 	}
 
+	public void printPreOrder(Node<T> current) {
+		// cima, esquerda, direita
+		// primeiro a ser impresso é a raiz
+		if (current != null) {
+			System.out.print("[" + current.getValue() + "] ");
+			printPreOrder(current.getLeft());
+			printPreOrder(current.getRight());
+		}
+	}
+
+	public void printPostOrder(Node<T> current) {
+		// esquerda, direita, raiz
+		// último a ser impresso é a raiz
+		if (current != null) {
+			printPostOrder(current.getLeft());
+			printPostOrder(current.getRight());
+			System.out.print("[" + current.getValue() + "] ");
+		}
+	}
+
 }
