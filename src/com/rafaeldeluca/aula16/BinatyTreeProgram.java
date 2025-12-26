@@ -16,10 +16,15 @@ public class BinatyTreeProgram {
 
 		System.out.println("\nÉ uma estrutura de dados organizada em níveis, que tem a raiz no topo."
 				+ "\nCada elemento é um nó, que tem um valor e um ponteiro para seus nós filhos."
-				+ "\nCada nó pode ter zero ou 2 filhos." 
-				+ "\nFolhas são os nós sem filhos.\n");
-		
-		
+				+ "\nCada nó pode ter zero ou 2 filhos." + "\nFolhas são os nós sem filhos.\n");
+
+		System.out.println("\nExitem 3 maneiras de percorrer uma árvore:"
+				+ "\n\tPercorrer a árvore em-ordem é na seguinte sequência: esquerda, cima, direita."
+				+ "\n\tPercorrer na pré-ordem é na seguinte sequência: cima, esquerda, direita."
+				+ "\n\tPercorrer na pós-ordem é na sequinte sequência: esquerda, direita, cima.");
+
+		System.out.println("\nPrint Binary Tree in order");
+		tree.printInOrder(tree.getRoot());
 
 	}
 

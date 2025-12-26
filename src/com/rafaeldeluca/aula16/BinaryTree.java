@@ -7,13 +7,11 @@ public class BinaryTree<T extends Comparable<T>> {
 	public BinaryTree() {
 		this.root = null;
 
-	}	
-	
+	}
 
 	public Node<T> getRoot() {
 		return root;
 	}
-
 
 	public void add(T value) {
 
@@ -23,16 +21,16 @@ public class BinaryTree<T extends Comparable<T>> {
 			this.root = newNode;
 		} else {
 			Node<T> current = this.root;
-			while(true) {
-				if(newNode.getValue().compareTo(current.getValue()) == -1) {
-					if(current.getLeft() != null) {
+			while (true) {
+				if (newNode.getValue().compareTo(current.getValue()) == -1) {
+					if (current.getLeft() != null) {
 						current = current.getLeft();
 					} else {
 						current.setLeft(newNode);
 						break;
 					}
 				} else {
-					if(current.getRight() != null) {
+					if (current.getRight() != null) {
 						current = current.getRight();
 					} else {
 						current.setRight(newNode);
@@ -40,6 +38,16 @@ public class BinaryTree<T extends Comparable<T>> {
 					}
 				}
 			}
+		}
+	}
+
+	public void printInOrder(Node<T> current) {
+
+		// imprimir esquerda, cima, direita
+		if (current != null) {
+			printInOrder(current.getLeft());
+			System.out.print("[" + current.getValue() + "] ");
+			printInOrder(current.getRight());
 		}
 	}
 
