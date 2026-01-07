@@ -19,9 +19,12 @@ public class BinatyTreeProgram {
 				+ "\nCada nó pode ter zero ou 2 filhos." + "\nFolhas são os nós sem filhos.\n");
 
 		System.out.println("\nExitem 3 maneiras de percorrer uma árvore:"
-				+ "\n\tPercorrer a árvore em-ordem é na seguinte sequência: esquerda, cima, direita."
-				+ "\n\tPercorrer na pré-ordem é na seguinte sequência: cima, esquerda, direita."
-				+ "\n\tPercorrer na pós-ordem é na sequinte sequência: esquerda, direita, cima.");
+				+ "\nPercorrer a árvore em-ordem é na seguinte sequência: esquerda, cima, direita"
+				+ "\n\tImpresso na ordem crescente."
+				+ "\nPercorrer na pré-ordem é na seguinte sequência: cima, esquerda, direita."
+				+ "\n\tPrimeiro a ser impresso é a raiz"
+				+ "\nPercorrer na pós-ordem é na sequinte sequência: esquerda, direita, cima."
+				+ "\n\tÚltimo a ser impresso é a raiz");
 
 		System.out.println("Root: " + tree.getRoot().getValue());
 
@@ -34,6 +37,6 @@ public class BinatyTreeProgram {
 		System.out.println("\nPrint Binary Tree post-order");
 		tree.printPostOrder(tree.getRoot());
 
+		
 	}
-
 }
