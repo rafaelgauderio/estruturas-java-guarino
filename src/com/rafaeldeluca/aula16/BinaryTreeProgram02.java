@@ -14,6 +14,9 @@ public class BinaryTreeProgram02 {
 		tree.add(12);
 		tree.add(25);
 
+		System.out.println("\nPrint Binary Tree pre-order");
+		tree.printPreOrder(tree.getRoot()); // first to print is the root = 10
+		
 		System.out.println("\nPrint Binary Tree in-order");
 		tree.printInOrder(tree.getRoot());
 
