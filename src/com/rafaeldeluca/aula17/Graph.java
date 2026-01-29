@@ -37,4 +37,34 @@ public class Graph<GENERIC> {
 		this.edges.add(edge);
 	}
 
+	public void printGraphUsingDepthFirstSearch() {
+		ArrayList<Node<GENERIC>> arrayOfVisited = new ArrayList<Node<GENERIC>>();
+		ArrayList<Node<GENERIC>> queueOfUnvisited = new ArrayList<Node<GENERIC>>();
+		// começa no primeiro nó
+
+		Node<GENERIC> currency = this.nodes.get(4);
+		/*
+		 * if (currency.getInputEdges().isEmpty()) { for (int i = 0; i < nodes.size();
+		 * i++) { currency = this.nodes.get(i); break; } }
+		 */
+		arrayOfVisited.add(currency);
+		System.out.println(currency.getData());
+		// após imprimir marca como nó visitado
+		queueOfUnvisited.add(currency);
+		// vai imprimindo enquando a lista de não visitados tiver nós
+		while (queueOfUnvisited.size() > 0) {
+			Node<GENERIC> visitedNode = queueOfUnvisited.get(0);
+			for (int i = 0; i < visitedNode.getOutputEdges().size(); i++) {
+				Node<GENERIC> nextNode = visitedNode.getOutputEdges().get(i).getEnd();
+				if (arrayOfVisited.contains(nextNode) == false) { // só o nó ainda não foi visitado
+					arrayOfVisited.add(nextNode);
+					System.out.println(nextNode.getData());
+					queueOfUnvisited.add(nextNode);
+				}
+			}
+			queueOfUnvisited.remove(0);
+
+		}
+	}
+
 }

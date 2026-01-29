@@ -16,17 +16,18 @@ public class GraphProgram {
 		directedGraph.addNode("De Luca");
 		directedGraph.addNode("Claudia");
 		directedGraph.addNode("Zara");
-		directedGraph.addNode("Laura");
+		directedGraph.addNode("Laurinha");
 
 		directedGraph.addEdge(2, "Rafael", "De Luca");
 		directedGraph.addEdge(3, "De Luca", "Zara");
 		directedGraph.addEdge(1, "Zara", "Claudia");
 		directedGraph.addEdge(1, "Rafael", "Claudia");
-		directedGraph.addEdge(3, "Laura", "Rafael");
-		directedGraph.addEdge(2, "Laura", "De Luca");
+		directedGraph.addEdge(3, "Laurinha", "Rafael");
+		directedGraph.addEdge(2, "Laurinha", "De Luca");
 		
-				
-
+		
+		System.out.println("Printing Nodes");
+		directedGraph.printGraphUsingDepthFirstSearch();
 	}
 
 }
